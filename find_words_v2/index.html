@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find Words</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <form id="settings" action="">
+                <div class="title">Settings</div>
+                <div id="size">
+                    <label for="word_size">word size (0 = unknown)</label>
+                    <input type="number" name="word size" id="word_size" value="0">
+                </div>
+                <div id="possible">
+                    <label for="possible_letters">possible letter(s)</label>
+                    <input type="text" name="possible letters" id="possible_letters">
+                </div>
+                <div id="inlcuded">
+                    <label for="included_letters">included letter(s)</label>
+                    <input type="text" name="included letters" id="included_letters">
+                </div>
+                <div id="not_included">
+                    <label for="">not included letter(s)</label>
+                    <input type="text" name="not included letters" id="not_included_letters">
+                </div>
+                <div class="btns">
+                    <button type="button" id="submit_btn">submit</button>
+                    <button type="button" id="reset_btn">reset</button>
+                </div>
+            </form>
+            <div id="used">
+                <div id="used_title" class="title">Used</div>
+                <div id="used_text" class="list_display"></div>
+            </div>
+            <div id="suggestions">
+                <div id="suggestion_info">
+                    <div id="suggestion_title" class="title">Suggestion(s)</div>
+                    <button id="reload_btn">Reload</button>
+                    <div id="number">
+                        <label for="number_of_displayed">Displayed</label>
+                        <span class="input" role="textbox" id="number_of_displayed" contenteditable>100</span>
+                        <!-- <input type="text" name="number of displayed" id="number_of_displayed" value="100"> -->
+                    </div>
+                </div>
+                <div id="suggestion_text" class="list_display"></div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./app.js"></script>
+</html>

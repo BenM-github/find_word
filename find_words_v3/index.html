@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find Words</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <div id="page_title" class="title">Find Words V3</div>
+            <form id="settings" class="container">
+                <div class="title section_info">Settings</div>
+                <div id="size">
+                    <label class="input_title" for="word_size">word size (0 = unknown)</label>
+                    <input type="number" name="word size" id="word_size" class="input_field" value="0">
+                </div>
+                <div id="possible">
+                    <label class="input_title" for="possible_letters">possible letter(s)</label>
+                    <input type="text" name="possible letters" class="input_field" id="possible_letters">
+                </div>
+                <div id="inlcuded">
+                    <label class="input_title" for="included_letters">included letter(s)</label>
+                    <input type="text" name="included letters" class="input_field" id="included_letters">
+                </div>
+                <div id="not_included">
+                    <label class="input_title" for="">not included letter(s)</label>
+                    <input type="text" name="not included letters" class="input_field" id="not_included_letters">
+                </div>
+                <div id="settings_buttons">
+                    <button type="button" id="submit_btn" onclick="submit()">submit</button>
+                    <button type="button" id="reset_btn" onclick="restart()">reset</button>
+                </div>
+            </form>
+            <div id="used" class="container">
+                <div id="used_info" class="section_info">
+                    <div class="title">Used</div>
+                    <button id="add_btn" type="button" onclick="addUsed()">Add</button>
+                </div>
+                <div id="used_text" class="list_display">
+                </div>
+            </div>
+            <div id="suggestions" class="container">
+                <div id="suggestion_info" class="section_info">
+                    <div id="suggestion_title" class="input_title">Suggestion(s)</div>
+                    <div class="reload_btn_container">
+                        <button id="reload_btn" onclick="reload()">Reload</button>
+                    </div>
+                    <div id="display_input_container">
+                        <label for="number_of_displayed" class="input_title">Displayed</label>
+                        <span class="input_field" role="textbox" id="number_of_displayed" contenteditable>100</span>
+                    </div>
+                </div>
+                <div id="suggestion_text" class="list_display">
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script src="./app.js"></script>
+</html>
